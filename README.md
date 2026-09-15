@@ -3,7 +3,9 @@
 入口：[论文复现清单](论文复现清单.md)。资料范围为用户确认的 4 篇期刊论文。
 
 2026-09-15 更新：SparseTSF 的环境、GPU 和 ETTh1 准备代码已整理成可运行文件，见
-[服务器操作说明](reproductions/01_SparseTSF_TPAMI2026/SERVER_GUIDE.md)。仅执行辅助脚本测试，尚未完成服务器 GPU 验证或论文指标复现。
+[服务器操作说明](reproductions/01_SparseTSF_TPAMI2026/SERVER_GUIDE.md)。
+现在可以在服务器 VS Code 中直接运行 [train_etth1_linear.py](reproductions/01_SparseTSF_TPAMI2026/train_etth1_linear.py)。
+本地验证仅针对辅助脚本；用户已回传服务器 GPU、数据检查通过及首次训练结束的截图，论文指标对照尚未完成。
 
 ```text
 课题2-2/

@@ -7,7 +7,9 @@
 IEEE Transactions on Pattern Analysis and Machine Intelligence，48(1): 170–183，2026 年 1 月（2025 年在线发表）。
 
 2026-09-15：已新增 [服务器运行说明](SERVER_GUIDE.md)、`scripts/` 准备脚本和 `tests/` 测试。
-这些是本项目的辅助文件，不是作者源码改版；尚未启动正式训练或复现论文指标。
+另已新增 [train_etth1_linear.py](train_etth1_linear.py)，可在服务器 VS Code 中直接点击运行。
+这些是本项目的辅助文件，不是作者源码改版。用户已回传首轮服务器训练/测试结束的截图，
+但尚未完成与期刊论文目标表格的指标对照；本地辅助测试不等于独立复跑验证。
 
 [正式论文 / DOI](https://doi.org/10.1109/TPAMI.2025.3602445)。源码/PDF最初获取和核验状态见 [source-lock.json](source-lock.json)，该记录保留获取时状态；后续准备脚本的运行方法见服务器说明。本地辅助脚本测试与服务器 GPU 验证分开记录。
 
@@ -18,6 +20,7 @@ IEEE Transactions on Pattern Analysis and Machine Intelligence，48(1): 170–18
 - [runs/](runs/README.md)：后续云端实验回传记录，不使用作者自带结果冒充本项目实测结果。
 - `scripts/`：本项目的环境、GPU 和 ETTh1 准备脚本，不启动训练。
 - `tests/`：准备脚本的无 GPU 自动测试。
+- [train_etth1_linear.py](train_etth1_linear.py)：封装已经运行过的单项训练命令，默认会开始新训练，输出单独归档。
 
 ## 固定源码来源
 
