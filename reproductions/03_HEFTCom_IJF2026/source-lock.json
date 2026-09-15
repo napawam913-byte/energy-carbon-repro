@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-15T03:13:26.291Z",
+  "paper": {
+    "title": "A hybrid strategy for probabilistic forecasting and trading of aggregated wind-solar power: Design and analysis in HEFTCom2024",
+    "doi": "10.1016/j.ijforecast.2025.11.008"
+  },
+  "status": "SOURCE_AND_READING_PDF_READY_EXPERIMENT_NOT_RUN",
+  "source": {
+    "repository_url": "https://github.com/BigdogManLuo/HEFTcom24.git",
+    "branch_at_acquisition": "main",
+    "commit": "a93dfb574a06fdc25c902de0cf93cd0bca75b658",
+    "acquisition_method": "github_official_codeload_commit_zip_snapshot",
+    "local_directory": "code",
+    "has_git_history": false,
+    "archive_url": "https://codeload.github.com/BigdogManLuo/HEFTcom24/zip/a93dfb574a06fdc25c902de0cf93cd0bca75b658",
+    "archive_sha256": "bb2a6ac744e8629a6660311af53695e82a6ae383905b5ad973e5aa75ae193e84",
+    "archive_bytes": 16003414,
+    "archive_retained": false,
+    "unpacked_bytes": 18205615,
+    "license_spdx": null,
+    "license_note": "No explicit license detected; public repository does not imply unrestricted redistribution.",
+    "integrity": {
+      "method": "Every local file compared against GitHub recursive tree at the pinned commit using Git blob SHA-1",
+      "checked_files": 72,
+      "all_matched": true,
+      "missing": [],
+      "extra": [],
+      "different": []
+    },
+    "upstream_files_modified": false,
+    "relation_to_published_experiments": "Current fixed source snapshot; exact agreement with publication-time experiment revision is not established."
+  },
+  "pdfs": [
+    {
+      "path": "paper/HEFTCom_arxiv2505.10367v2_PREPRINT.pdf",
+      "source_url": "https://arxiv.org/pdf/2505.10367v2",
+      "version": "ARXIV_V2_PREPRINT_NOT_ELSEVIER_VERSION_OF_RECORD",
+      "bytes": 24662583,
+      "sha256": "4f1da87c2dfdf7b994069d3950c09d07f7cd3e865aa48fa775aa5b37e39877c2",
+      "pages": 23,
+      "pdf_structure_readable": true,
+      "first_page_rendered_and_visually_checked": true,
+      "entire_text_read": false,
+      "identical_to_final_journal_text": null
+    }
+  ],
+  "missing_items": [],
+  "reproduction": {
+    "dependencies_installed": false,
+    "author_code_executed": false,
+    "training_started": false,
+    "paper_metrics_reproduced": false,
+    "large_experiment_data_downloaded": false,
+    "notes": [
+      "Files originally bundled in upstream code are preserved; bundled results and models are not locally reproduced results.",
+      "Do not treat preprint or author manuscript as a publisher typeset version.",
+      "Cloud environment and exact dataset/table/configuration must be verified before training."
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-15T03:13:26.291Z",
+  "paper": {
+    "title": "Probabilistic day-ahead forecasting of system-level renewable energy and electricity demand",
+    "doi": "10.1038/s41467-026-69015-w"
+  },
+  "status": "SOURCE_AND_READING_PDF_READY_EXPERIMENT_NOT_RUN",
+  "source": {
+    "repository_url": "https://github.com/gterren/caiso_power.git",
+    "branch_at_acquisition": "POD",
+    "commit": "89c41c10e6c8f7d2313957822d376f16e043f7fd",
+    "acquisition_method": "github_official_codeload_commit_zip_snapshot",
+    "local_directory": "code",
+    "has_git_history": false,
+    "archive_url": "https://codeload.github.com/gterren/caiso_power/zip/89c41c10e6c8f7d2313957822d376f16e043f7fd",
+    "archive_sha256": "c42b9599bb3d271122f2747354b1242a75fc8d5d177c1f5be338a40d2a20f99c",
+    "archive_bytes": 84667,
+    "archive_retained": false,
+    "unpacked_bytes": 346805,
+    "license_spdx": "Apache-2.0",
+    "license_note": "Upstream license files retained.",
+    "integrity": {
+      "method": "Every local file compared against GitHub recursive tree at the pinned commit using Git blob SHA-1",
+      "checked_files": 25,
+      "all_matched": true,
+      "missing": [],
+      "extra": [],
+      "different": []
+    },
+    "upstream_files_modified": false,
+    "relation_to_published_experiments": "Current fixed source snapshot; exact agreement with publication-time experiment revision is not established."
+  },
+  "pdfs": [
+    {
+      "path": "paper/CAISO_NatureCommunications2026_PUBLISHER.pdf",
+      "source_url": "https://www.nature.com/articles/s41467-026-69015-w.pdf",
+      "version": "NATURE_COMMUNICATIONS_PUBLISHER_VERSION_OF_RECORD",
+      "bytes": 11780874,
+      "sha256": "b790b60e7b33eb58d0be1a638722421d837cb1a7009be93a90e6e32a629bbc8a",
+      "pages": 19,
+      "pdf_structure_readable": true,
+      "first_page_rendered_and_visually_checked": true,
+      "entire_text_read": false,
+      "identical_to_final_journal_text": true
+    }
+  ],
+  "missing_items": [],
+  "reproduction": {
+    "dependencies_installed": false,
+    "author_code_executed": false,
+    "training_started": false,
+    "paper_metrics_reproduced": false,
+    "large_experiment_data_downloaded": false,
+    "notes": [
+      "Files originally bundled in upstream code are preserved; bundled results and models are not locally reproduced results.",
+      "Do not treat preprint or author manuscript as a publisher typeset version.",
+      "Cloud environment and exact dataset/table/configuration must be verified before training."
+    ]
+  }
+}

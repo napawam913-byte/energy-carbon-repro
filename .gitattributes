@@ -1,0 +1,5 @@
+# 保持跨 Windows/Linux 的脚本换行一致。
+*.py text eol=lf
+*.sh text eol=lf
+*.md text eol=lf
+*.txt text eol=lf

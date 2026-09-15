@@ -1,0 +1,21 @@
+# 作者源码按 source-lock.json 单独获取，不误提交嵌套仓库或上游缓存。
+/reproductions/*/code/
+
+# 本地论文原文件默认不公开转载；版本说明和来源记录保留。
+/reproductions/*/paper/*.pdf
+/reproductions/*/paper/*.part
+/reproductions/*/paper/*.download
+
+# 运行产物和独立环境不入库，保留空目录说明。
+/reproductions/*/runs/*
+!/reproductions/*/runs/README.md
+/reproductions/*/.venv*/
+/reproductions/*/data/
+
+# 本机内部设计、Python 缓存及认证配置不公开。
+/docs/superpowers/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*

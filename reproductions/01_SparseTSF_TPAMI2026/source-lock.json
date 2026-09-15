@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-15T03:13:26.251Z",
+  "paper": {
+    "title": "SparseTSF: Lightweight and Robust Time Series Forecasting via Sparse Modeling",
+    "doi": "10.1109/TPAMI.2025.3602445"
+  },
+  "status": "SOURCE_READY_JOURNAL_PDF_MISSING_BACKGROUND_PDF_AVAILABLE",
+  "source": {
+    "repository_url": "https://github.com/lss-1138/SparseTSF.git",
+    "branch_at_acquisition": "main",
+    "commit": "b8c2740eecc84d8095ffce49ba5acafe68e53bb8",
+    "acquisition_method": "github_official_codeload_commit_zip_snapshot",
+    "local_directory": "code",
+    "has_git_history": false,
+    "archive_url": "https://codeload.github.com/lss-1138/SparseTSF/zip/b8c2740eecc84d8095ffce49ba5acafe68e53bb8",
+    "archive_sha256": "b865d203d2d3ec68dc4cb90b5161ac83b25be4a17b271038cdb70a17a95298c7",
+    "archive_bytes": 1534575,
+    "archive_retained": false,
+    "unpacked_bytes": 1738789,
+    "license_spdx": "Apache-2.0",
+    "license_note": "Upstream license files retained.",
+    "integrity": {
+      "method": "Every local file compared against GitHub recursive tree at the pinned commit using Git blob SHA-1",
+      "checked_files": 75,
+      "all_matched": true,
+      "missing": [],
+      "extra": [],
+      "different": []
+    },
+    "upstream_files_modified": false,
+    "relation_to_published_experiments": "Current fixed source snapshot; exact agreement with publication-time experiment revision is not established."
+  },
+  "pdfs": [
+    {
+      "path": "paper/SparseTSF_ICML2024_arxiv2405.00946v2_BACKGROUND.pdf",
+      "source_url": "https://arxiv.org/pdf/2405.00946v2",
+      "version": "ICML_2024_BACKGROUND_NOT_TPAMI_JOURNAL_ARTICLE",
+      "bytes": 797073,
+      "sha256": "8c5b74d79711da12c272391e7b39868f213cfda708fb81b51b8ed3332764926c",
+      "pages": 16,
+      "pdf_structure_readable": true,
+      "first_page_rendered_and_visually_checked": true,
+      "entire_text_read": false,
+      "identical_to_final_journal_text": null
+    }
+  ],
+  "missing_items": [
+    "TPAMI 2026 journal full-text PDF: obtain through lawful institutional or author access; the included ICML paper is background only."
+  ],
+  "reproduction": {
+    "dependencies_installed": false,
+    "author_code_executed": false,
+    "training_started": false,
+    "paper_metrics_reproduced": false,
+    "large_experiment_data_downloaded": false,
+    "notes": [
+      "Files originally bundled in upstream code are preserved; bundled results and models are not locally reproduced results.",
+      "Do not treat preprint or author manuscript as a publisher typeset version.",
+      "Cloud environment and exact dataset/table/configuration must be verified before training."
+    ]
+  }
+}

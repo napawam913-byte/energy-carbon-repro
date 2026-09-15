@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-15T03:13:26.291Z",
+  "paper": {
+    "title": "Time Evidence Fusion Network: Multi-Source View in Long-Term Time Series Forecasting",
+    "doi": "10.1109/TPAMI.2025.3596905"
+  },
+  "status": "SOURCE_AND_READING_PDF_READY_EXPERIMENT_NOT_RUN",
+  "source": {
+    "repository_url": "https://github.com/ztxtech/Time-Evidence-Fusion-Network.git",
+    "branch_at_acquisition": "master",
+    "commit": "4577c3397b4f095d49c885b72432c74919b39dca",
+    "acquisition_method": "github_official_codeload_commit_zip_snapshot",
+    "local_directory": "code",
+    "has_git_history": false,
+    "archive_url": "https://codeload.github.com/ztxtech/Time-Evidence-Fusion-Network/zip/4577c3397b4f095d49c885b72432c74919b39dca",
+    "archive_sha256": "88993b72c94abf66e16ead2127ce7110bc40b3ceda25bea1354f25a187568ffc",
+    "archive_bytes": 3989789,
+    "archive_retained": false,
+    "unpacked_bytes": 5742694,
+    "license_spdx": "MIT",
+    "license_note": "Upstream license files retained.",
+    "integrity": {
+      "method": "Every local file compared against GitHub recursive tree at the pinned commit using Git blob SHA-1",
+      "checked_files": 1159,
+      "all_matched": true,
+      "missing": [],
+      "extra": [],
+      "different": []
+    },
+    "upstream_files_modified": false,
+    "relation_to_published_experiments": "Current fixed source snapshot; exact agreement with publication-time experiment revision is not established."
+  },
+  "pdfs": [
+    {
+      "path": "paper/TEFN_arxiv2405.06419v4_ACCEPTED_AUTHOR_VERSION.pdf",
+      "source_url": "https://arxiv.org/pdf/2405.06419v4",
+      "version": "ARXIV_V4_AUTHOR_MANUSCRIPT_ACCEPTANCE_NOTED_ON_ARXIV",
+      "bytes": 8378964,
+      "sha256": "6638d8e8865e882f811bea3fd915a644435fa7f96db5ee31de6d8f89f3ed1e8a",
+      "pages": 15,
+      "pdf_structure_readable": true,
+      "first_page_rendered_and_visually_checked": true,
+      "entire_text_read": false,
+      "identical_to_final_journal_text": null
+    }
+  ],
+  "missing_items": [],
+  "reproduction": {
+    "dependencies_installed": false,
+    "author_code_executed": false,
+    "training_started": false,
+    "paper_metrics_reproduced": false,
+    "large_experiment_data_downloaded": false,
+    "notes": [
+      "Files originally bundled in upstream code are preserved; bundled results and models are not locally reproduced results.",
+      "Do not treat preprint or author manuscript as a publisher typeset version.",
+      "Cloud environment and exact dataset/table/configuration must be verified before training."
+    ]
+  }
+}
