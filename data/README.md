@@ -90,3 +90,5 @@ python scripts/build_erco_observations.py
 - [EIA930 2023 下半年](https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2023_Jul_Dec.csv)
 
 观测表还不是可以直接喂给预测模型的全部输入。后续仍要固定训练/验证/测试时间边界、只用训练集拟合预处理、限制预测时可用变量，并建立 168→24 小时样本。
+
+上述后续步骤的独立入口现已提供：`prepare_forecast_data.py` 构建预测清单，`run_naive_baselines.py` 仅运行两个朴素验证基线。操作命令与边界见 [预测数据与基线说明](../docs/FORECAST_GUIDE.md)。本阶段仍不训练神经网络、不评价测试集，生成的清单和指标继续保留在被忽略的 `data/` 目录。
