@@ -57,14 +57,36 @@ sha256sum -c data/raw/oge/v0.8.0/2023/SHA256SUMS
 
 两份文件均显示 `OK` 才表示本次传输校验通过。整个过程只使用 Git 和系统校验工具，无需 GPU、Python 或重新安装环境。如果 `pull` 提示存在冲突或本地改动，请保留文件并检查；不要强制重置仓库。
 
-## 仍缺少的课题数据
+## 迁移时的缺项与后续补齐
 
-截至本次迁移，下列文件尚未在已检查的 Windows 位置找到，也没有随本次迁移生成或下载：
+两份 OGE CSV 最初迁移时，下列文件尚未在已检查的 Windows 位置找到，未随该次迁移生成或下载：
 
 - `data/raw/eia/EIA930_BALANCE_2023_Jan_Jun.csv`
 - `data/raw/eia/EIA930_BALANCE_2023_Jul_Dec.csv`
 - `data/processed/erco_2023_v1/` 下的整理后观测表与 `metadata.json`
 
-旧云端曾生成上述处理表，但尚未核实已迁到当前 L40。不能把本次两份原始 CSV 的迁移说成完整训练数据集迁移；还需找回或重建 EIA/OGE 对齐观测表，核验时间划分、输入可用性和训练集内预处理，才能运行已约定的 168→24 小时课题基线。
+2026-09-17 后续进展：用户已在当前 L40 下载两份 EIA 文件并回传匹配的 SHA256；本地也从 EIA 官方下载同版本文件。新增脚本已在 Windows 本地成功重建 8760 小时观测表；服务器上的脚本运行尚待用户执行。公式、边界及检查结果见 [当天进度](../docs/progress/2026-09-17.md)。
 
 本次不搬迁 ETTh1/Electricity 基准数据、不搬迁模型权重、不创建训练样本，也不运行训练。后续数据和运行产物默认仍不公开，不能使用 `git add -f` 批量绕过忽略规则。
+
+## 重建小时观测表（数据处理，不是训练）
+
+执行入口：[build_erco_observations.py](../scripts/build_erco_observations.py)。脚本检查原文件版本、统一小时键、对齐 EIA/OGE，计算分能源与综合发电侧 CO₂ 因子并写出审计记录。不修改原始数据，不自动插补，不划分数据集，不训练模型。
+
+需要 Python 3.10+、NumPy、pandas。先使用已有 `sparsetsf-repro` 环境，无需 GPU；已本地验证 Python 3.10/3.13，Linux 上仍须实际执行测试。
+
+确认四份原文件均位于上列路径后，在仓库根目录执行：
+
+```bash
+python -m unittest discover -s tests -p test_erco_observations.py -v &&
+python scripts/build_erco_observations.py
+```
+
+默认生成 `data/processed/erco_2023_v1/observations.csv` 和 `metadata.json`，成功后显示 `PASS: observations built and re-read; no training performed.`。输出目录必须尚不存在；需另行重跑时可指定 `--output-dir data/processed/erco_2023_check2`，不会覆盖已有产物。
+
+四份来源的 SHA256 均在脚本内固定。原文件缺失或哈希不符时请检查下载和版本，不绕过校验。EIA 数据不随仓库发布，换服务器后可从官方重新下载：
+
+- [EIA930 2023 上半年](https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2023_Jan_Jun.csv)
+- [EIA930 2023 下半年](https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2023_Jul_Dec.csv)
+
+观测表还不是可以直接喂给预测模型的全部输入。后续仍要固定训练/验证/测试时间边界、只用训练集拟合预处理、限制预测时可用变量，并建立 168→24 小时样本。
