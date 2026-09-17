@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "purpose": "记录 OGE 原始数据迁移来源与字节校验，不表示训练数据已就绪。",
+  "status": "RAW_OGE_ONLY_NOT_TRAIN_READY",
+  "migration_date": "2026-09-17",
+  "provider": "Singularity Energy / Open Grid Emissions Initiative",
+  "dataset_version": "v0.8.0",
+  "dataset_year": 2023,
+  "region": "ERCO",
+  "granularity": "hourly",
+  "units": "metric_units",
+  "license": "CC-BY-4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_evidence_url": "https://singularity.energy/tools",
+  "landing_page": "https://singularity.energy/open-grid-emissions",
+  "modifications": "CSV contents unchanged; repository paths and provenance files added.",
+  "files": [
+    {
+      "path": "data/raw/oge/v0.8.0/2023/power_sector_data/ERCO.csv",
+      "bytes": 24656092,
+      "sha256": "42f8086ef1af21e34afb1775e7e9413ada1e5296149fab545693989dc9318a64",
+      "source_url": "https://open-grid-emissions.s3.amazonaws.com/open_grid_emissions_data/v0.8.0/results/2023/power_sector_data/hourly/metric_units/ERCO.csv",
+      "accounting_boundary": "generation"
+    },
+    {
+      "path": "data/raw/oge/v0.8.0/2023/carbon_accounting/ERCO.csv",
+      "bytes": 1163006,
+      "sha256": "2b9d8ef20cc5395179a848f1913003ec04e850c265b80d739735b3437ee2c174",
+      "source_url": "https://open-grid-emissions.s3.amazonaws.com/open_grid_emissions_data/v0.8.0/results/2023/carbon_accounting/hourly/metric_units/ERCO.csv",
+      "accounting_boundary": "consumption"
+    }
+  ],
+  "not_included": [
+    "data/raw/eia/EIA930_BALANCE_2023_Jan_Jun.csv",
+    "data/raw/eia/EIA930_BALANCE_2023_Jul_Dec.csv",
+    "data/processed/erco_2023_v1/"
+  ],
+  "verification_scope": [
+    "Local source and destination SHA256 match the recorded hashes.",
+    "Source files retained at their original local locations.",
+    "No data transformation, forecast split, fitting or evaluation performed."
+  ]
+}

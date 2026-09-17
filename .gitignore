@@ -19,3 +19,17 @@ __pycache__/
 .pytest_cache/
 .env
 .env.*
+
+# 研究数据默认不公开；经用户批准只放行两份 OGE 原始 CSV 及来源清单。
+/data/**
+!/data/README.md
+!/data/raw/
+!/data/raw/oge/
+!/data/raw/oge/v0.8.0/
+!/data/raw/oge/v0.8.0/2023/
+!/data/raw/oge/v0.8.0/2023/manifest.json
+!/data/raw/oge/v0.8.0/2023/SHA256SUMS
+!/data/raw/oge/v0.8.0/2023/power_sector_data/
+!/data/raw/oge/v0.8.0/2023/power_sector_data/ERCO.csv
+!/data/raw/oge/v0.8.0/2023/carbon_accounting/
+!/data/raw/oge/v0.8.0/2023/carbon_accounting/ERCO.csv

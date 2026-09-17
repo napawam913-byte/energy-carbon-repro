@@ -3,3 +3,8 @@
 *.sh text eol=lf
 *.md text eol=lf
 *.txt text eol=lf
+
+# 原始数据逐字节保留，避免 Windows/Linux 换行转换改变 SHA256。
+/data/raw/oge/v0.8.0/2023/power_sector_data/ERCO.csv -text
+/data/raw/oge/v0.8.0/2023/carbon_accounting/ERCO.csv -text
+/data/raw/oge/v0.8.0/2023/SHA256SUMS text eol=lf
