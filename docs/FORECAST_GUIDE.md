@@ -93,6 +93,6 @@ python run_naive_baselines.py --prepared data/processed/erco_168_24_check2 --out
 
 ## 5. 后续接入 SparseTSF 的边界
 
-本轮尚未增加 ERCO 的 SparseTSF 训练入口。下一步将固定作者源码版本，单独适配当前窗口与十个目标、统一标准化和指标、仅按验证集选 checkpoint，再另行执行最终测试评估。
+数据准备阶段没有训练模型。后续经用户确认，已新增 ERCO 的 SparseTSF 训练入口；操作见 [ERCO_GUIDE.md](../reproductions/01_SparseTSF_TPAMI2026/ERCO_GUIDE.md)。它固定作者源码版本，适配当前窗口与十个目标、统一标准化和指标，仅按验证集选 checkpoint；最终测试评估不在本入口范围内。
 
 尤其要记录：作者 SparseTSF 的 channel-independent 结构分别处理各变量历史，不会因为把负荷列放进输入就自动利用负荷影响风电或碳因子。接入时必须明确负荷通道的处理与损失范围，不能把新增跨变量模块仍称为未改动的原始 SparseTSF。

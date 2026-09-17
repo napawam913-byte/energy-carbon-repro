@@ -1,0 +1,11 @@
+{
+  "model_type": "linear",
+  "period_len": 24,
+  "d_model": 128,
+  "seed": 2023,
+  "batch_size": 128,
+  "epochs": 30,
+  "patience": 5,
+  "learning_rate": 0.02,
+  "timeout_seconds": 1800
+}
